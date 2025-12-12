@@ -15,6 +15,7 @@ export interface Category {
 }
 
 export const categories: Category[] = [
+  { id: "appetizers", name: "Appetizers", icon: "fa-french-fries" },
   { id: "doner", name: "Döner", icon: "fa-utensils" },
   { id: "burger", name: "Burger", icon: "fa-burger" },
   { id: "pizza", name: "Pizza", icon: "fa-pizza-slice" },
@@ -26,6 +27,49 @@ export const categories: Category[] = [
 ];
 
 export const menuItems: MenuItem[] = [
+  // Appetizers
+  {
+    id: "appetizer-1",
+    name: "Sweet Potato Fries",
+    description: "Crispy sweet potato fries with garlic aioli dip",
+    price: 4.90,
+    image: "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=400&h=300&fit=crop",
+    category: "appetizers",
+  },
+  {
+    id: "appetizer-2",
+    name: "Classic Fries",
+    description: "Golden crispy fries with your choice of ketchup or mayo",
+    price: 3.50,
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop",
+    category: "appetizers",
+    isBestseller: true,
+  },
+  {
+    id: "appetizer-3",
+    name: "Onion Rings",
+    description: "Crispy battered onion rings with BBQ sauce",
+    price: 4.50,
+    image: "https://images.unsplash.com/photo-1639024471283-03518883512d?w=400&h=300&fit=crop",
+    category: "appetizers",
+  },
+  {
+    id: "appetizer-4",
+    name: "Chicken Wings",
+    description: "Spicy buffalo wings with blue cheese dip (6 pieces)",
+    price: 7.90,
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&h=300&fit=crop",
+    category: "appetizers",
+  },
+  {
+    id: "appetizer-5",
+    name: "Mozzarella Sticks",
+    description: "Breaded mozzarella sticks with marinara sauce",
+    price: 5.90,
+    image: "https://images.unsplash.com/photo-1548340748-6d2b7d7da280?w=400&h=300&fit=crop",
+    category: "appetizers",
+  },
+
   // Döner
   {
     id: "doner-1",

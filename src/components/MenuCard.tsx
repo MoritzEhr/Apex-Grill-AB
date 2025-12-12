@@ -42,7 +42,7 @@ export function MenuCard({ item, index }: MenuCardProps) {
         
         {/* Price Badge */}
         <div className="absolute top-3 right-3 bg-card/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg">
-          <span className="font-bold text-primary">€{item.price.toFixed(2)}</span>
+          <span className="font-bold text-primary">{item.price.toFixed(2)}€</span>
         </div>
       </div>
 

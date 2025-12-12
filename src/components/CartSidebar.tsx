@@ -106,7 +106,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                   {items.map((item) => (
                     <div key={item.id} className="flex justify-between text-sm">
                       <span className="text-muted-foreground">{item.quantity}x {item.name}</span>
-                      <span className="text-card-foreground font-medium">€{(item.price * item.quantity).toFixed(2)}</span>
+                      <span className="text-card-foreground font-medium">{(item.price * item.quantity).toFixed(2)}€</span>
                     </div>
                   ))}
                 </div>
@@ -116,21 +116,21 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
               <div className="bg-secondary/50 rounded-xl p-4 space-y-3">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span className="text-card-foreground">€{totalPrice.toFixed(2)}</span>
+                  <span className="text-card-foreground">{totalPrice.toFixed(2)}€</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Delivery Fee</span>
-                  <span className="text-card-foreground">€{deliveryFee.toFixed(2)}</span>
+                  <span className="text-card-foreground">{deliveryFee.toFixed(2)}€</span>
                 </div>
                 {extras > 0 && (
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Extras</span>
-                    <span className="text-card-foreground">€{extras.toFixed(2)}</span>
+                    <span className="text-card-foreground">{extras.toFixed(2)}€</span>
                   </div>
                 )}
                 <div className="border-t border-border pt-3 flex justify-between">
                   <span className="font-bold text-card-foreground">Total</span>
-                  <span className="font-bold text-primary text-lg">€{finalTotal.toFixed(2)}</span>
+                  <span className="font-bold text-primary text-lg">{finalTotal.toFixed(2)}€</span>
                 </div>
               </div>
 
@@ -151,7 +151,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                       <span className="font-bold text-card-foreground">Free Subscription</span>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      First week <span className="font-semibold text-success">€0.00</span>, then €4.99/month. 
+                    First week <span className="font-semibold text-success">0.00€</span>, then 4.99€/month. 
                       Cancel anytime. Get free delivery and exclusive deals!
                     </p>
                   </div>
@@ -166,7 +166,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                 className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold text-base hover:bg-primary/90 transition-all shadow-glow hover:shadow-lg flex items-center justify-center gap-2"
               >
                 <i className="fa-solid fa-check"></i>
-                Confirm Order - €{finalTotal.toFixed(2)}
+                Confirm Order - {finalTotal.toFixed(2)}€
               </button>
             </div>
           </div>
@@ -218,7 +218,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                         />
                         <div className="flex-1 min-w-0">
                           <h4 className="font-semibold text-card-foreground text-sm line-clamp-1">{item.name}</h4>
-                          <p className="text-sm text-muted-foreground mb-2">€{item.price.toFixed(2)}</p>
+                          <p className="text-sm text-muted-foreground mb-2">{item.price.toFixed(2)}€</p>
                           
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-1">
@@ -261,7 +261,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                             <span className="font-medium text-card-foreground">Extras & Options</span>
                             {hasExtras && (
                               <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full">
-                                +€{extras.toFixed(2)}
+                                +{extras.toFixed(2)}€
                               </span>
                             )}
                           </div>
@@ -291,7 +291,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                             </div>
                             {selectedTipPercent > 0 && (
                               <p className="text-xs text-muted-foreground mt-1 text-center">
-                                Tip: €{tipAmount.toFixed(2)}
+                                Tip: {tipAmount.toFixed(2)}€
                               </p>
                             )}
                           </div>
@@ -311,7 +311,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                               </div>
                               <p className="text-xs text-muted-foreground">Protection for issues</p>
                             </div>
-                            <span className="text-xs font-semibold text-card-foreground">+€{insuranceCost.toFixed(2)}</span>
+                            <span className="text-xs font-semibold text-card-foreground">+{insuranceCost.toFixed(2)}€</span>
                           </label>
 
                           {/* CO2 Neutral Delivery */}
@@ -329,7 +329,7 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                               </div>
                               <p className="text-xs text-muted-foreground">Support climate protection</p>
                             </div>
-                            <span className="text-xs font-semibold text-card-foreground">+€{co2Cost.toFixed(2)}</span>
+                            <span className="text-xs font-semibold text-card-foreground">+{co2Cost.toFixed(2)}€</span>
                           </label>
                         </AccordionContent>
                       </AccordionItem>
@@ -346,24 +346,24 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                 <div className="space-y-1 mb-3 text-sm">
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span className="text-card-foreground">€{totalPrice.toFixed(2)}</span>
+                    <span className="text-card-foreground">{totalPrice.toFixed(2)}€</span>
                   </div>
                   {hasExtras && (
                     <div className="flex items-center justify-between">
                       <span className="text-muted-foreground">Extras</span>
-                      <span className="text-card-foreground">€{extras.toFixed(2)}</span>
+                      <span className="text-card-foreground">{extras.toFixed(2)}€</span>
                     </div>
                   )}
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground">Delivery</span>
-                    <span className="text-card-foreground">€{deliveryFee.toFixed(2)}</span>
+                    <span className="text-card-foreground">{deliveryFee.toFixed(2)}€</span>
                   </div>
                 </div>
 
                 {/* Total */}
                 <div className="flex items-center justify-between py-3 border-t border-border mb-3">
                   <span className="text-lg font-bold text-card-foreground">Total</span>
-                  <span className="text-2xl font-bold text-primary">€{finalTotal.toFixed(2)}</span>
+                  <span className="text-2xl font-bold text-primary">{finalTotal.toFixed(2)}€</span>
                 </div>
 
                 <button
