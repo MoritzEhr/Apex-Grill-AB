@@ -5,6 +5,7 @@ export interface MenuItem {
   price: number;
   image: string;
   category: string;
+  isBestseller?: boolean;
 }
 
 export interface Category {
@@ -33,6 +34,7 @@ export const menuItems: MenuItem[] = [
     price: 7.90,
     image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop",
     category: "doner",
+    isBestseller: true,
   },
   {
     id: "doner-2",
@@ -67,6 +69,7 @@ export const menuItems: MenuItem[] = [
     price: 8.90,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
     category: "burger",
+    isBestseller: true,
   },
   {
     id: "burger-2",
@@ -109,6 +112,7 @@ export const menuItems: MenuItem[] = [
     price: 12.90,
     image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop",
     category: "pizza",
+    isBestseller: true,
   },
   {
     id: "pizza-3",
@@ -185,6 +189,7 @@ export const menuItems: MenuItem[] = [
     price: 13.90,
     image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=400&h=300&fit=crop",
     category: "vegetarian",
+    isBestseller: true,
   },
 
   // Soups
@@ -217,7 +222,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "dessert-1",
     name: "Baklava",
-    description: "Traditionelles türkisches Gebäck mit Pistazien und Honig",
+    description: "Traditional Turkish pastry with pistachios and honey",
     price: 4.50,
     image: "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=400&h=300&fit=crop",
     category: "desserts",
@@ -225,7 +230,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "dessert-2",
     name: "Künefe",
-    description: "Warmes Käsedessert mit Sirup und Pistazien",
+    description: "Warm cheese dessert with syrup and pistachios",
     price: 5.90,
     image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&h=300&fit=crop",
     category: "desserts",
@@ -233,7 +238,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "dessert-3",
     name: "Tiramisu",
-    description: "Klassisches italienisches Dessert mit Espresso und Mascarpone",
+    description: "Classic Italian dessert with espresso and mascarpone",
     price: 5.50,
     image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop",
     category: "desserts",
@@ -241,15 +246,16 @@ export const menuItems: MenuItem[] = [
   {
     id: "dessert-4",
     name: "Chocolate Lava Cake",
-    description: "Warmer Schokoladenkuchen mit flüssigem Kern und Vanilleeis",
+    description: "Warm chocolate cake with molten center and vanilla ice cream",
     price: 6.50,
     image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&h=300&fit=crop",
     category: "desserts",
+    isBestseller: true,
   },
   {
     id: "dessert-5",
-    name: "Eis-Auswahl",
-    description: "3 Kugeln nach Wahl: Vanille, Schoko, Erdbeere oder Pistazie",
+    name: "Ice Cream Selection",
+    description: "3 scoops of your choice: Vanilla, Chocolate, Strawberry or Pistachio",
     price: 4.00,
     image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400&h=300&fit=crop",
     category: "desserts",
@@ -257,7 +263,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "dessert-6",
     name: "Sütlaç",
-    description: "Türkischer Milchreis mit Zimt und Rosenwasser",
+    description: "Turkish rice pudding with cinnamon and rosewater",
     price: 3.90,
     image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop",
     category: "desserts",
@@ -299,47 +305,47 @@ export const menuItems: MenuItem[] = [
   {
     id: "drink-5",
     name: "Mango Lassi",
-    description: "Cremiger Mango-Joghurt-Drink aus Indien",
+    description: "Creamy mango yogurt drink from India",
     price: 3.90,
     image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&h=300&fit=crop",
     category: "drinks",
   },
   {
     id: "drink-6",
-    name: "Frischer Orangensaft",
-    description: "Frisch gepresster Orangensaft",
+    name: "Fresh Orange Juice",
+    description: "Freshly squeezed orange juice",
     price: 4.50,
     image: "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=400&h=300&fit=crop",
     category: "drinks",
   },
   {
     id: "drink-7",
-    name: "Türkischer Kaffee",
-    description: "Traditionell zubereiteter türkischer Mokka",
+    name: "Turkish Coffee",
+    description: "Traditionally prepared Turkish mocha",
     price: 2.90,
     image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=300&fit=crop",
     category: "drinks",
   },
   {
     id: "drink-8",
-    name: "Eistee Pfirsich",
-    description: "Erfrischender hausgemachter Eistee",
+    name: "Peach Iced Tea",
+    description: "Refreshing homemade iced tea",
     price: 3.00,
     image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop",
     category: "drinks",
   },
   {
     id: "drink-9",
-    name: "Mineralwasser",
-    description: "Still oder mit Kohlensäure (0,5L)",
+    name: "Mineral Water",
+    description: "Still or sparkling (0.5L)",
     price: 2.00,
     image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&h=300&fit=crop",
     category: "drinks",
   },
   {
     id: "drink-10",
-    name: "Apfelschorle",
-    description: "Erfrischende Apfelschorle",
+    name: "Apple Spritzer",
+    description: "Refreshing apple juice with sparkling water",
     price: 2.90,
     image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop",
     category: "drinks",
@@ -347,15 +353,15 @@ export const menuItems: MenuItem[] = [
   {
     id: "drink-11",
     name: "Energy Drink",
-    description: "Red Bull oder Monster (250ml)",
+    description: "Red Bull or Monster (250ml)",
     price: 3.50,
     image: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=400&h=300&fit=crop",
     category: "drinks",
   },
   {
     id: "drink-12",
-    name: "Milchshake",
-    description: "Vanille, Schoko oder Erdbeere mit Sahne",
+    name: "Milkshake",
+    description: "Vanilla, Chocolate or Strawberry with whipped cream",
     price: 4.50,
     image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop",
     category: "drinks",
