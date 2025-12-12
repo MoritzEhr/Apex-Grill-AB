@@ -32,6 +32,14 @@ export function MenuCard({ item, index }: MenuCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
+        {/* Bestseller Badge */}
+        {item.isBestseller && (
+          <div className="absolute top-3 left-3 bg-warning text-warning-foreground px-3 py-1 rounded-lg shadow-lg flex items-center gap-1.5 animate-pulse">
+            <i className="fa-solid fa-fire text-sm"></i>
+            <span className="font-bold text-xs uppercase tracking-wide">Bestseller</span>
+          </div>
+        )}
+        
         {/* Price Badge */}
         <div className="absolute top-3 right-3 bg-card/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg">
           <span className="font-bold text-primary">€{item.price.toFixed(2)}</span>

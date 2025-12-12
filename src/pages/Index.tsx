@@ -13,6 +13,7 @@ function IndexContent() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const { clearCart } = useCart();
 
   const handleCheckout = () => {
@@ -23,12 +24,16 @@ function IndexContent() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header onCartClick={() => setIsCartOpen(true)} />
+      <Header 
+        onCartClick={() => setIsCartOpen(true)} 
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+      />
       
       <main>
         <Hero />
         <CategoryBar activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
-        <MenuGrid activeCategory={activeCategory} />
+        <MenuGrid activeCategory={activeCategory} searchQuery={searchQuery} />
       </main>
 
       <Footer />
