@@ -783,7 +783,7 @@ const categories = [
                     <span class="subscription-option-title">Kostenloses Abonnement</span>
                   </div>
                   <p class="subscription-option-text">
-                    Immer die schnellste Lieferung und exklusive Angebote erhalten!<br>
+                    Immer die <strong style="color: white;"> schnellste Lieferung und exklusive Angebote </strong> erhalten!<br>
                     Testen Sie es jetzt für <span class="text-success">0,00€</span>! 
                   </p>
                 </div>
@@ -904,7 +904,7 @@ const categories = [
                         <input type="checkbox" id="insuranceYes" ${cartState.hasInsurance ? "checked" : ""}>
                         <div class="extra-option-content">
                           <div class="extra-option-header">
-                            <span class="extra-option-title">Ja, ich möchte gegen Schäden und für den Fall von kaltem Essen versichert sein!</span>
+                            <span class="extra-option-title">Ja, ich möchte gegen kaltes Essen und eventuelle Schäde versichert sein</span>
                           </div>
                         </div>
                         <span class="extra-option-price">+0.99€</span>
@@ -936,7 +936,7 @@ const categories = [
                         <input type="checkbox" id="co2No" ${!cartState.isCO2Neutral ? "checked" : ""}>
                         <div class="extra-option-content">
                           <div class="extra-option-header">
-                            <span class="extra-option-title">Nein, das ist mir egal :(</span>
+                            <span class="extra-option-title">Nein, mir ist die Umwelt egal :(</span>
                           </div>
                         </div>
                       </label>
