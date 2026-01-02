@@ -44,6 +44,7 @@ const menuItems = [
     price: 8.90,
     image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&h=300&fit=crop",
     category: "appetizers",
+    isBestseller: true,
   },
   {
     id: "appetizer-5",
@@ -61,6 +62,7 @@ const menuItems = [
     price: 7.50,
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fkim-foods.com%2Fwp-content%2Fuploads%2F2018%2F07%2FKebab-scaled.jpg&f=1&nofb=1&ipt=0ca71b31f83144c158191dc39654f3005c117d96696125d067be0706c0fb0619",
     category: "doner",
+    isBestseller: true,
   },
   {
     id: "doner-2",
@@ -103,6 +105,7 @@ const menuItems = [
     price: 12.50,
     image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop",
     category: "burger",
+    isBestseller: true,
   },
   {
     id: "burger-3",
@@ -144,6 +147,7 @@ const menuItems = [
     price: 13.50,
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
     category: "pizza",
+    isBestseller: true,
   },
   {
     id: "pizza-4",
@@ -202,6 +206,7 @@ const menuItems = [
     price: 12.90,
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wellplated.com%2Fwp-content%2Fuploads%2F2021%2F06%2FGrilled-Halloumi-Salad.jpg&f=1&nofb=1&ipt=0edaddf586f004c3c68942a25d56170fac9e5ed2d117206477b1aa8c9d5c6ced",
     category: "vegetarian",
+    isBestseller: true,
   },
   {
     id: "veg-4",
@@ -276,6 +281,7 @@ const menuItems = [
     price: 7.90,
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cookingclassy.com%2Fwp-content%2Fuploads%2F2022%2F02%2Fmolten-lava-cake-17.jpg&f=1&nofb=1&ipt=826139bf945b1b8f6b83c9bc3c38e1302134c8355afb97dc2ae9e2e92ada3aa5",
     category: "desserts",
+    isBestseller: true,
   },
   {
     id: "dessert-6",
